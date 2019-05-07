@@ -19,6 +19,7 @@
 		8E9D45FA2281F093001162CC /* ScoreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D45F92281F093001162CC /* ScoreProvider.swift */; };
 		8E9D45FD2281F602001162CC /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D45FC2281F602001162CC /* ScoreViewController.swift */; };
 		8E9D45FF2281F63B001162CC /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D45FE2281F63B001162CC /* Color.swift */; };
+		8E9D46012281FA72001162CC /* TappingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D46002281FA72001162CC /* TappingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		8E9D45F92281F093001162CC /* ScoreProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreProvider.swift; sourceTree = "<group>"; };
 		8E9D45FC2281F602001162CC /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
 		8E9D45FE2281F63B001162CC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		8E9D46002281FA72001162CC /* TappingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			children = (
 				8E9D45F32281E941001162CC /* ScoreViewController.swift */,
 				8E9D45BE2280AC41001162CC /* ViewController.swift */,
+				8E9D46002281FA72001162CC /* TappingViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E9D46012281FA72001162CC /* TappingViewController.swift in Sources */,
 				8E9D45BF2280AC41001162CC /* ViewController.swift in Sources */,
 				8E9D45FA2281F093001162CC /* ScoreProvider.swift in Sources */,
 				8E9D45FF2281F63B001162CC /* Color.swift in Sources */,
