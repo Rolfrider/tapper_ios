@@ -5,7 +5,6 @@
 //  Created by Rafał Kwiatkowski on 07/05/2019.
 //  Copyright © 2019 Rafał Kwiatkowski. All rights reserved.
 //
-
 import UIKit
 
 class ScoreViewController: UICollectionViewController {
@@ -32,6 +31,7 @@ class ScoreViewController: UICollectionViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         scores = scoreProvider.provideScores(key: ViewController.SCORES_KEY)
+        collectionView.backgroundColor = Color.secondary.value
     }
     
     
@@ -58,7 +58,7 @@ extension ScoreViewController{
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ScoreCell
         
-        cell.backgroundColor = .green
+        cell.backgroundColor = Color.accent.value
         //cell.tapsLbl.text = "\(scores[indexPath.row].taps)"
         //cell.timeLbl.text = scores[indexPath.row].time
         
@@ -75,7 +75,7 @@ extension ScoreViewController: UICollectionViewDelegateFlowLayout{
         let availableWidth = view.frame.width
         
         
-        return CGSize(width: availableWidth, height: 98)
+        return CGSize(width: availableWidth - sectionInsets.left*2, height: 98)
     }
     
     func collectionView(_ collectionView: UICollectionView,
