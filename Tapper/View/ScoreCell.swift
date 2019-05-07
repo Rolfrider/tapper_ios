@@ -1,5 +1,5 @@
 //
-//  RecordCell.swift
+//  ScoreCell.swift
 //  Tapper
 //
 //  Created by Rafał Kwiatkowski on 07/05/2019.
@@ -8,10 +8,8 @@
 
 import UIKit
 
-class RecordCell: UICollectionViewCell {
+class ScoreCell: UICollectionViewCell {
     
     @IBOutlet weak var timeLbl: UILabel!
     @IBOutlet weak var tapsLbl: UILabel!
-    
-    
 }

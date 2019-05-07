@@ -46,10 +46,10 @@
             </objects>
             <point key="canvasLocation" x="-417.39130434782612" y="13.392857142857142"/>
         </scene>
-        <!--Record View Controller-->
+        <!--Score View Controller-->
         <scene sceneID="qhl-Ws-VLW">
             <objects>
-                <collectionViewController id="TZQ-Xh-GzK" customClass="RecordViewController" customModule="Tapper" customModuleProvider="target" sceneMemberID="viewController">
+                <collectionViewController id="TZQ-Xh-GzK" customClass="ScoreViewController" customModule="Tapper" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="HW6-lt-g4z">
                         <rect key="frame" x="0.0" y="0.0" width="313" height="438"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -61,7 +61,7 @@
                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                         </collectionViewFlowLayout>
                         <cells>
-                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="Record" id="mie-pb-A1P" customClass="RecordCell" customModule="Tapper" customModuleProvider="target">
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" misplaced="YES" reuseIdentifier="Score" id="mie-pb-A1P" customClass="ScoreCell" customModule="Tapper" customModuleProvider="target">
                                 <rect key="frame" x="56.5" y="0.0" width="200" height="98"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">

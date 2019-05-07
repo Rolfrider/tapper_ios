@@ -13,8 +13,10 @@
 		8E9D45C42280AC43001162CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E9D45C32280AC43001162CC /* Assets.xcassets */; };
 		8E9D45C72280AC43001162CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9D45C52280AC43001162CC /* LaunchScreen.storyboard */; };
 		8E9D45D22280AC43001162CC /* TapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D45D12280AC43001162CC /* TapperTests.swift */; };
-		8E9D45E42281A6BC001162CC /* RecordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D45E32281A6BC001162CC /* RecordViewController.swift */; };
-		8E9D45E62281B02D001162CC /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D45E52281B02D001162CC /* RecordCell.swift */; };
+		8E9D45F42281E941001162CC /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D45F32281E941001162CC /* ScoreViewController.swift */; };
+		8E9D45F62281E9B8001162CC /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D45F52281E9B8001162CC /* Score.swift */; };
+		8E9D45F82281E9CE001162CC /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D45F72281E9CE001162CC /* ScoreCell.swift */; };
+		8E9D45FA2281F093001162CC /* ScoreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D45F92281F093001162CC /* ScoreProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,8 +40,10 @@
 		8E9D45CD2280AC43001162CC /* TapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E9D45D12280AC43001162CC /* TapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapperTests.swift; sourceTree = "<group>"; };
 		8E9D45D32280AC43001162CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		8E9D45E32281A6BC001162CC /* RecordViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordViewController.swift; sourceTree = "<group>"; };
-		8E9D45E52281B02D001162CC /* RecordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
+		8E9D45F32281E941001162CC /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		8E9D45F52281E9B8001162CC /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		8E9D45F72281E9CE001162CC /* ScoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
+		8E9D45F92281F093001162CC /* ScoreProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,8 +109,8 @@
 		8E9D45DC2280AD9F001162CC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				8E9D45F32281E941001162CC /* ScoreViewController.swift */,
 				8E9D45BE2280AC41001162CC /* ViewController.swift */,
-				8E9D45E32281A6BC001162CC /* RecordViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -114,7 +118,7 @@
 		8E9D45DD2280ADB7001162CC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8E9D45E52281B02D001162CC /* RecordCell.swift */,
+				8E9D45F72281E9CE001162CC /* ScoreCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -122,6 +126,8 @@
 		8E9D45DE2280ADC0001162CC /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				8E9D45F52281E9B8001162CC /* Score.swift */,
+				8E9D45F92281F093001162CC /* ScoreProvider.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -228,9 +234,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E9D45BF2280AC41001162CC /* ViewController.swift in Sources */,
+				8E9D45FA2281F093001162CC /* ScoreProvider.swift in Sources */,
 				8E9D45BD2280AC41001162CC /* AppDelegate.swift in Sources */,
-				8E9D45E62281B02D001162CC /* RecordCell.swift in Sources */,
-				8E9D45E42281A6BC001162CC /* RecordViewController.swift in Sources */,
+				8E9D45F42281E941001162CC /* ScoreViewController.swift in Sources */,
+				8E9D45F82281E9CE001162CC /* ScoreCell.swift in Sources */,
+				8E9D45F62281E9B8001162CC /* Score.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
