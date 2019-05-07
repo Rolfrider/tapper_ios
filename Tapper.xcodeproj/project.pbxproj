@@ -13,6 +13,12 @@
 		8E9D45C42280AC43001162CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E9D45C32280AC43001162CC /* Assets.xcassets */; };
 		8E9D45C72280AC43001162CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9D45C52280AC43001162CC /* LaunchScreen.storyboard */; };
 		8E9D45D22280AC43001162CC /* TapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D45D12280AC43001162CC /* TapperTests.swift */; };
+		8E9D45F42281E941001162CC /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D45F32281E941001162CC /* ScoreViewController.swift */; };
+		8E9D45F62281E9B8001162CC /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D45F52281E9B8001162CC /* Score.swift */; };
+		8E9D45F82281E9CE001162CC /* ScoreCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D45F72281E9CE001162CC /* ScoreCell.swift */; };
+		8E9D45FA2281F093001162CC /* ScoreProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D45F92281F093001162CC /* ScoreProvider.swift */; };
+		8E9D45FD2281F602001162CC /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D45FC2281F602001162CC /* ScoreViewController.swift */; };
+		8E9D45FF2281F63B001162CC /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D45FE2281F63B001162CC /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,12 @@
 		8E9D45CD2280AC43001162CC /* TapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E9D45D12280AC43001162CC /* TapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapperTests.swift; sourceTree = "<group>"; };
 		8E9D45D32280AC43001162CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8E9D45F32281E941001162CC /* ScoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		8E9D45F52281E9B8001162CC /* Score.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		8E9D45F72281E9CE001162CC /* ScoreCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScoreCell.swift; sourceTree = "<group>"; };
+		8E9D45F92281F093001162CC /* ScoreProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreProvider.swift; sourceTree = "<group>"; };
+		8E9D45FC2281F602001162CC /* ScoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreViewController.swift; sourceTree = "<group>"; };
+		8E9D45FE2281F63B001162CC /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +89,15 @@
 		8E9D45BB2280AC41001162CC /* Tapper */ = {
 			isa = PBXGroup;
 			children = (
+				8E9D45DE2280ADC0001162CC /* Model */,
+				8E9D45DD2280ADB7001162CC /* View */,
+				8E9D45DC2280AD9F001162CC /* Controller */,
 				8E9D45BC2280AC41001162CC /* AppDelegate.swift */,
-				8E9D45BE2280AC41001162CC /* ViewController.swift */,
 				8E9D45C02280AC41001162CC /* Main.storyboard */,
 				8E9D45C32280AC43001162CC /* Assets.xcassets */,
 				8E9D45C52280AC43001162CC /* LaunchScreen.storyboard */,
 				8E9D45C82280AC43001162CC /* Info.plist */,
+				8E9D45FE2281F63B001162CC /* Color.swift */,
 			);
 			path = Tapper;
 			sourceTree = "<group>";
@@ -90,10 +105,45 @@
 		8E9D45D02280AC43001162CC /* TapperTests */ = {
 			isa = PBXGroup;
 			children = (
+				8E9D45FB2281F5BD001162CC /* Controller */,
 				8E9D45D12280AC43001162CC /* TapperTests.swift */,
 				8E9D45D32280AC43001162CC /* Info.plist */,
 			);
 			path = TapperTests;
+			sourceTree = "<group>";
+		};
+		8E9D45DC2280AD9F001162CC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E9D45F32281E941001162CC /* ScoreViewController.swift */,
+				8E9D45BE2280AC41001162CC /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8E9D45DD2280ADB7001162CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8E9D45F72281E9CE001162CC /* ScoreCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8E9D45DE2280ADC0001162CC /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8E9D45F52281E9B8001162CC /* Score.swift */,
+				8E9D45F92281F093001162CC /* ScoreProvider.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8E9D45FB2281F5BD001162CC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8E9D45FC2281F602001162CC /* ScoreViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -198,7 +248,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E9D45BF2280AC41001162CC /* ViewController.swift in Sources */,
+				8E9D45FA2281F093001162CC /* ScoreProvider.swift in Sources */,
+				8E9D45FF2281F63B001162CC /* Color.swift in Sources */,
 				8E9D45BD2280AC41001162CC /* AppDelegate.swift in Sources */,
+				8E9D45F42281E941001162CC /* ScoreViewController.swift in Sources */,
+				8E9D45F82281E9CE001162CC /* ScoreCell.swift in Sources */,
+				8E9D45F62281E9B8001162CC /* Score.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +262,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8E9D45D22280AC43001162CC /* TapperTests.swift in Sources */,
+				8E9D45FD2281F602001162CC /* ScoreViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
