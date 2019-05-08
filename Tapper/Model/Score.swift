@@ -7,7 +7,7 @@
 //
 
 
-class Score{
+class Score: Codable{
     
     let taps: Int
     let time: String

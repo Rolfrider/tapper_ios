@@ -29,6 +29,9 @@
                                 <rect key="frame" x="192" y="673" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="play"/>
+                                <connections>
+                                    <segue destination="fdF-er-UBN" kind="show" id="gbb-u4-XXJ"/>
+                                </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZJz-3S-QvA">
                                 <rect key="frame" x="49" y="169" width="313" height="438"/>
@@ -121,20 +124,56 @@
             </objects>
             <point key="canvasLocation" x="261" y="44"/>
         </scene>
-        <!--View Controller-->
+        <!--Tapping View Controller-->
         <scene sceneID="RiS-Xy-3cM">
             <objects>
-                <viewController id="fdF-er-UBN" sceneMemberID="viewController">
+                <viewController id="fdF-er-UBN" customClass="TappingViewController" customModule="Tapper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vas-ne-ftY">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="5:00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ty9-Y6-p2G">
+                                <rect key="frame" x="141" y="264" width="132" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TAP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AzH-b8-Pgv">
+                                <rect key="frame" x="169" y="371" width="66" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qx7-3J-zU4">
+                                <rect key="frame" x="180" y="446" width="135" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
                         <viewLayoutGuide key="safeArea" id="MjW-or-hTS"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Kxr-dG-YMl" appends="YES" id="Xuu-cu-KnX"/>
+                        </connections>
                     </view>
+                    <connections>
+                        <outlet property="tapsLbl" destination="Qx7-3J-zU4" id="r1o-HS-ScY"/>
+                        <outlet property="timeLbl" destination="ty9-Y6-p2G" id="bDS-fn-GMx"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kJo-sI-pPg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Kxr-dG-YMl">
+                    <connections>
+                        <action selector="handleTap:" destination="fdF-er-UBN" id="1Q7-eT-sjM"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="455" y="586"/>
+            <point key="canvasLocation" x="302.89855072463769" y="656.25"/>
         </scene>
     </scenes>
 </document>
