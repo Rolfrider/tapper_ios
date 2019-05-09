@@ -30,6 +30,7 @@ class TappingViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         timeCounter.startTimer()
+        startAnimation()
     }
     
     func displayTime() {
@@ -55,18 +56,57 @@ class TappingViewController: UIViewController {
         
         let alertController = UIAlertController(title: "Congratulations!", message:
             alertmessage, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Thanks", style: .default))
+        alertController.addAction(UIAlertAction(title: "Thanks", style: .default, handler: {
+            action in
+            self.dismiss(animated: true, completion: nil)
+        }))
         
         self.present(alertController, animated: true, completion: nil)
+        
     }
 
     @IBAction func handleTap(_ sender: UITapGestureRecognizer) {
         tapCounter.taps += 1
+        animateTap(forLocation: sender.location(in: self.view))
+        
     }
     
 }
 // MARK: - Private
 extension TappingViewController{
+    
+    private func startAnimation(){
+        
+        let size = CGSize(width: 200, height: 250)
+        let label = UILabel(frame: CGRect(origin: .zero, size: size))
+        label.center = view.center
+        
+    }
+    
+    private func animateTap(forLocation location: CGPoint){
+        let touchView = UIView()
+        let size = CGSize(width: 100, height: 100)
+        touchView.frame = CGRect(origin: .zero, size: size)
+        touchView.center = location
+        touchView.backgroundColor = Color.darkPrimary.value
+        touchView.layer.cornerRadius = size.width*0.5
+        view.addSubview(touchView)
+        touchView.alpha = 0.5
+        let animator = UIViewPropertyAnimator(duration: 0.3,curve: .easeInOut){
+            touchView.transform = .init(scaleX: 0.1, y: 0.1)
+            touchView.alpha = 0
+        }
+        
+        animator.addCompletion{ (pos) in
+            if pos == .end{
+                touchView.removeFromSuperview()
+            }
+            
+        }
+        
+        animator.startAnimation()
+        
+    }
     
     private func registerObservers(){
         NotificationCenter.default.addObserver(

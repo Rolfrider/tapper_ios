@@ -18,18 +18,15 @@ class UserDefsAdapter: UserDefsAdapting {
     let SCORES_KEY = "SCORES"
 
     func getScore() -> [Score] {
-        var userData: [Score]! = []
-        if let data = UserDefaults.standard.array(forKey: SCORES_KEY) as? [Data] {
-            data.forEach{
-                if let score = try? PropertyListDecoder().decode(Score.self, from: $0){
-                    userData.append(score)
-                }
-                
-            }
-            return userData!
-        } else {
-            return userData
+        
+        guard let data = UserDefaults.standard.data(forKey: SCORES_KEY) else {
+            return []
         }
+        
+        let decodedArray = try! JSONDecoder().decode([Score].self, from: data)
+        
+        return decodedArray.sorted(by: {$0.taps > $1.taps})
+        
     }
     
     func saveScore(score: Score) -> Bool {
@@ -50,13 +47,9 @@ class UserDefsAdapter: UserDefsAdapting {
     }
     
     private func saveScores(scores: [Score]){
-        var encodedData: [Data] = []
-        scores.forEach{
-            if let data = try? PropertyListEncoder().encode($0){
-                encodedData.append(data)
-            }
-        }
+        let encodedData = try! JSONEncoder().encode(scores)
         UserDefaults.standard.set(encodedData, forKey: SCORES_KEY)
+        
     }
     
     
