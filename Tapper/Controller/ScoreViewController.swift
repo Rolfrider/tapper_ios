@@ -16,24 +16,28 @@ class ScoreViewController: UICollectionViewController {
                                              right: 20)
     
     private var scores: [Score] = []
-    private let scoreProvider: ScoreProviding
+    private let userDefsAdapter: UserDefsAdapting
     
-    init(scoreProvider: ScoreProviding = UserDefsScoreProvider()) {
-        self.scoreProvider = scoreProvider
+    init(userDefsAdapter: UserDefsAdapting = UserDefsAdapter()) {
+        self.userDefsAdapter = userDefsAdapter
         super.init(nibName: nil, bundle: nil)
     }
     
     required init?(coder aDecoder: NSCoder) {
-        self.scoreProvider = UserDefsScoreProvider()
+        self.userDefsAdapter = UserDefsAdapter()
         super.init(coder: aDecoder)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scores = scoreProvider.provideScores(key: ViewController.SCORES_KEY)
         collectionView.backgroundColor = Color.secondary.value
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        scores = userDefsAdapter.getScore()
+        collectionView.reloadData()
+    }
     
     
     
@@ -59,8 +63,8 @@ extension ScoreViewController{
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ScoreCell
         
         cell.backgroundColor = Color.accent.value
-        //cell.tapsLbl.text = "\(scores[indexPath.row].taps)"
-        //cell.timeLbl.text = scores[indexPath.row].time
+        cell.tapsLbl.text = "\(scores[indexPath.section].taps)"
+        cell.timeLbl.text = scores[indexPath.section].time
         
         return cell
     }

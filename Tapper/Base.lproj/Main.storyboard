@@ -13,7 +13,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tapper" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ViewController" id="BYZ-38-t0r" customClass="ViewController" customModule="Tapper" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,6 +29,9 @@
                                 <rect key="frame" x="192" y="673" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="play"/>
+                                <connections>
+                                    <segue destination="fdF-er-UBN" kind="show" id="gbb-u4-XXJ"/>
+                                </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZJz-3S-QvA">
                                 <rect key="frame" x="49" y="169" width="313" height="438"/>
@@ -81,13 +84,13 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a5e-C3-Nha">
-                                            <rect key="frame" x="62" y="16" width="21" height="21"/>
+                                            <rect key="frame" x="416" y="16" width="21" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20:30:40" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4R-os-LmG">
-                                            <rect key="frame" x="12" y="53" width="71" height="21"/>
+                                            <rect key="frame" x="366" y="53" width="71" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -120,6 +123,99 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UuZ-xg-r4X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="261" y="44"/>
+        </scene>
+        <!--Tapping View Controller-->
+        <scene sceneID="RiS-Xy-3cM">
+            <objects>
+                <viewController id="fdF-er-UBN" customClass="TappingViewController" customModule="Tapper" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vas-ne-ftY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="rto-HQ-x86">
+                                <rect key="frame" x="0.0" y="60" width="414" height="820"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="BKc-rE-0fD">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="207.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="TAP">
+                                                <attributes>
+                                                    <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="144" name="GillSans-SemiBoldItalic"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="ty9-Y6-p2G">
+                                        <rect key="frame" x="0.0" y="223.5" width="414" height="139"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="5:00">
+                                                <attributes>
+                                                    <color key="NSColor" name="systemGreenColor" catalog="System" colorSpace="catalog"/>
+                                                    <font key="NSFont" size="96" name="GillSans-SemiBoldItalic"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qx7-3J-zU4">
+                                        <rect key="frame" x="0.0" y="378.5" width="414" height="208"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="0">
+                                                <attributes>
+                                                    <font key="NSFont" size="144" name="GillSans-SemiBoldItalic"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="20" translatesAutoresizingMaskIntoConstraints="NO" id="fFG-lX-N8v">
+                                        <rect key="frame" x="0.0" y="602.5" width="414" height="217.5"/>
+                                        <attributedString key="attributedText">
+                                            <fragment content="ME">
+                                                <attributes>
+                                                    <font key="NSFont" size="144" name="GillSans-SemiBoldItalic"/>
+                                                    <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                </attributes>
+                                            </fragment>
+                                        </attributedString>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="MjW-or-hTS" firstAttribute="trailing" secondItem="rto-HQ-x86" secondAttribute="trailing" id="CUm-gP-6C8"/>
+                            <constraint firstItem="rto-HQ-x86" firstAttribute="leading" secondItem="MjW-or-hTS" secondAttribute="leading" id="FYh-L5-02n"/>
+                            <constraint firstAttribute="bottom" secondItem="rto-HQ-x86" secondAttribute="bottom" constant="16" id="oMX-aj-ftV"/>
+                            <constraint firstItem="rto-HQ-x86" firstAttribute="top" secondItem="MjW-or-hTS" secondAttribute="top" constant="16" id="pln-Q2-nPS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="MjW-or-hTS"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Kxr-dG-YMl" appends="YES" id="Xuu-cu-KnX"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="meLbl" destination="fFG-lX-N8v" id="kXz-8k-u1J"/>
+                        <outlet property="tapLbl" destination="BKc-rE-0fD" id="UPn-H6-jMl"/>
+                        <outlet property="tapsCounterLbl" destination="Qx7-3J-zU4" id="r1o-HS-ScY"/>
+                        <outlet property="timeLbl" destination="ty9-Y6-p2G" id="bDS-fn-GMx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kJo-sI-pPg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Kxr-dG-YMl">
+                    <connections>
+                        <action selector="handleTap:" destination="fdF-er-UBN" id="1Q7-eT-sjM"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="302.89855072463769" y="656.25"/>
         </scene>
     </scenes>
 </document>
