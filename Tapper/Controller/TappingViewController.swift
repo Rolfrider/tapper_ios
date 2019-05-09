@@ -11,8 +11,9 @@ import UIKit
 class TappingViewController: UIViewController {
 
     @IBOutlet weak var timeLbl: UILabel!
-    
-    @IBOutlet weak var tapsLbl: UILabel!
+    @IBOutlet weak var tapLbl: UILabel!
+    @IBOutlet weak var meLbl: UILabel!
+    @IBOutlet weak var tapsCounterLbl: UILabel!
     
     let timeCounter: TimeCounter = TimeCounter(countFrom: 5.0)
     let tapCounter = TapCounter()
@@ -20,7 +21,10 @@ class TappingViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Color.secondary.value
-        
+        timeLbl.textColor = Color.primary.value
+        tapLbl.textColor = Color.darkPrimary.value
+        meLbl.textColor = Color.darkPrimary.value
+        tapsCounterLbl.textColor = Color.primary.value
         self.registerObservers()
         
         
@@ -34,11 +38,12 @@ class TappingViewController: UIViewController {
     }
     
     func displayTime() {
-        timeLbl.text = "\(timeCounter.timeLeft)"
+        let leftTime: Int = Int(timeCounter.timeLeft*100)
+        timeLbl.text = String(format: "%02d:%02d", leftTime/100, leftTime % 100)
     }
     
     func displayTaps() {
-        tapsLbl.text = "\(tapCounter.taps)"
+        tapsCounterLbl.text = "\(tapCounter.taps)"
     }
     
     func endGame() {
