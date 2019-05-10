@@ -129,7 +129,7 @@ extension TappingViewController{
                 }){
                     completed in
                     labels[2].removeFromSuperview()
-                    UIView.animate(withDuration: duration*2, animations: {
+                    UIView.animate(withDuration: duration*3, animations: {
                         labels[3].transform = .identity
                         labels[3].alpha = 1
                         labels[3].font = labels[3].font.withSize(endFontSize)
