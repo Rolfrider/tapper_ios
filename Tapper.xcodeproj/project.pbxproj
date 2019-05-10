@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8E10C4492285DADC001FD4A1 /* UserDefsScores.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E10C4482285DADC001FD4A1 /* UserDefsScores.swift */; };
 		8E9D45BD2280AC41001162CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D45BC2280AC41001162CC /* AppDelegate.swift */; };
 		8E9D45BF2280AC41001162CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D45BE2280AC41001162CC /* ViewController.swift */; };
 		8E9D45C22280AC41001162CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9D45C02280AC41001162CC /* Main.storyboard */; };
@@ -20,7 +21,6 @@
 		8E9D46012281FA72001162CC /* TappingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D46002281FA72001162CC /* TappingViewController.swift */; };
 		8E9D46032283108A001162CC /* TimeCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D46022283108A001162CC /* TimeCounter.swift */; };
 		8E9D4605228319FE001162CC /* TapCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D4604228319FE001162CC /* TapCounter.swift */; };
-		8E9D460922831C94001162CC /* UserDefAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D460822831C94001162CC /* UserDefAdapter.swift */; };
 		8E9D460F22849BB6001162CC /* ScoreHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D460E22849BB6001162CC /* ScoreHeaderView.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +35,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8E10C4482285DADC001FD4A1 /* UserDefsScores.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefsScores.swift; sourceTree = "<group>"; };
 		8E9D45B92280AC41001162CC /* Tapper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tapper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E9D45BC2280AC41001162CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8E9D45BE2280AC41001162CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -52,7 +53,6 @@
 		8E9D46002281FA72001162CC /* TappingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TappingViewController.swift; sourceTree = "<group>"; };
 		8E9D46022283108A001162CC /* TimeCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCounter.swift; sourceTree = "<group>"; };
 		8E9D4604228319FE001162CC /* TapCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapCounter.swift; sourceTree = "<group>"; };
-		8E9D460822831C94001162CC /* UserDefAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefAdapter.swift; sourceTree = "<group>"; };
 		8E9D460E22849BB6001162CC /* ScoreHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -142,7 +142,7 @@
 				8E9D45F52281E9B8001162CC /* Score.swift */,
 				8E9D46022283108A001162CC /* TimeCounter.swift */,
 				8E9D4604228319FE001162CC /* TapCounter.swift */,
-				8E9D460822831C94001162CC /* UserDefAdapter.swift */,
+				8E10C4482285DADC001FD4A1 /* UserDefsScores.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -259,13 +259,13 @@
 				8E9D45BF2280AC41001162CC /* ViewController.swift in Sources */,
 				8E9D45FF2281F63B001162CC /* Color.swift in Sources */,
 				8E9D45BD2280AC41001162CC /* AppDelegate.swift in Sources */,
-				8E9D460922831C94001162CC /* UserDefAdapter.swift in Sources */,
 				8E9D46032283108A001162CC /* TimeCounter.swift in Sources */,
 				8E9D45F42281E941001162CC /* ScoreViewController.swift in Sources */,
 				8E9D45F82281E9CE001162CC /* ScoreCell.swift in Sources */,
 				8E9D4605228319FE001162CC /* TapCounter.swift in Sources */,
 				8E9D45F62281E9B8001162CC /* Score.swift in Sources */,
 				8E9D460F22849BB6001162CC /* ScoreHeaderView.swift in Sources */,
+				8E10C4492285DADC001FD4A1 /* UserDefsScores.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,8 +13,6 @@ class TapCounter {
     let TAP_COUNT = "TAP"
     let TAP_RECORD = "RECORD"
     
-    let userDefsAdapter: UserDefsAdapting = UserDefsAdapter()
-    
     var newRecord = false
     
     let gameDate: String
@@ -40,7 +38,7 @@ class TapCounter {
     
     func storeScore() {
         let score = Score(taps: self.taps, time: self.gameDate)
-        newRecord = userDefsAdapter.saveScore(score: score)
+        newRecord = UserDefsScores.saveScore(score: score)
         NotificationCenter.default.post(
             Notification(name: Notification.Name(rawValue: self.TAP_RECORD), object: self))
         

@@ -17,18 +17,8 @@ class ScoreViewController: UICollectionViewController {
     
     let places = [1, 2, 3, 4, 5]
     
-    private var scores: [Score] = []
-    private let userDefsAdapter: UserDefsAdapting
-    
-    init(userDefsAdapter: UserDefsAdapting = UserDefsAdapter()) {
-        self.userDefsAdapter = userDefsAdapter
-        super.init(nibName: nil, bundle: nil)
-    }
-    
-    required init?(coder aDecoder: NSCoder) {
-        self.userDefsAdapter = UserDefsAdapter()
-        super.init(coder: aDecoder)
-    }
+    private var scores: [Score] = UserDefsScores.getScores()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +28,7 @@ class ScoreViewController: UICollectionViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        scores = userDefsAdapter.getScore()
+        scores = UserDefsScores.getScores()
         collectionView.reloadData()
     }
     
