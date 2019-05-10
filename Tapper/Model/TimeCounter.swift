@@ -13,12 +13,12 @@ class TimeCounter {
     let TIMER_TICK = "TICK"
     let TIMER_END = "END"
     
-    private var timer: Timer?
+    private var ticTimer: Timer?
     let timeInterval: Float = 0.01
     var timeLeft: Float = 0 {
         didSet{
             NotificationCenter.default.post(
-                Notification(name: Notification.Name(rawValue: self.TIMER_TICK), object: nil))
+                Notification(name: Notification.Name(rawValue: self.TIMER_TICK), object: self))
         }
     }
     
@@ -27,10 +27,10 @@ class TimeCounter {
     }
     
     func startTimer(){
-        if timer == nil {
+        if ticTimer == nil {
             let timer = Timer.scheduledTimer(timeInterval: Double(timeInterval), target: self, selector: #selector(updateTimer), userInfo: nil, repeats: true)
             RunLoop.current.add(timer, forMode: .common)
-            self.timer = timer
+            self.ticTimer = timer
         }
     }
     
@@ -45,8 +45,8 @@ class TimeCounter {
     
     private func endCounter(){
         NotificationCenter.default.post(
-            Notification(name: Notification.Name(rawValue: self.TIMER_END), object: nil))
-        timer?.invalidate()
-        timer = nil
+            Notification(name: Notification.Name(rawValue: self.TIMER_END), object: self))
+        ticTimer?.invalidate()
+        ticTimer = nil
     }
 }

@@ -47,12 +47,12 @@ class TappingViewController: UIViewController {
         tapsCounterLbl.text = "\(tapCounter.taps)"
     }
     
-    func endGame() {
+    @objc func endGame() {
+        
         tapCounter.storeScore()
     }
     
     func displayNotification(){
-        
         let alertmessage: String
         if tapCounter.newRecord {
             alertmessage = "You are qualified for the list of records. You taped \(tapCounter.taps) times"
@@ -173,26 +173,26 @@ extension TappingViewController{
     
     private func registerObservers(){
         NotificationCenter.default.addObserver(
-        forName: NSNotification.Name(timeCounter.TIMER_TICK), object: nil, queue: nil){
-            (Notification) -> Void in
+        forName: NSNotification.Name(timeCounter.TIMER_TICK), object: timeCounter, queue: OperationQueue.main){
+            _ in
             self.displayTime()
         }
         
         NotificationCenter.default.addObserver(
-        forName: NSNotification.Name(timeCounter.TIMER_END), object: nil, queue: nil){
-            (Notification) -> Void in
+        forName: NSNotification.Name(timeCounter.TIMER_END), object: timeCounter, queue: nil){
+            _ in
             self.endGame()
         }
         
         NotificationCenter.default.addObserver(
-        forName: NSNotification.Name(tapCounter.TAP_COUNT), object: nil, queue: nil){
-            (Notification) -> Void in
+        forName: NSNotification.Name(tapCounter.TAP_COUNT), object: tapCounter, queue: OperationQueue.main){
+            _ in
             self.displayTaps()
         }
         
         NotificationCenter.default.addObserver(
-        forName: NSNotification.Name(tapCounter.TAP_RECORD), object: nil, queue: nil){
-            (Notification) -> Void in
+        forName: NSNotification.Name(tapCounter.TAP_RECORD), object: tapCounter, queue: OperationQueue.main){
+            _ in
             self.displayNotification()
         }
     }
