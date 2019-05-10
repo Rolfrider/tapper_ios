@@ -26,7 +26,7 @@ extension Color{
         case .darkPrimary:
             instanceColor = UIColor(hexString: "#05af4d")
         case .accent:
-            instanceColor = UIColor(hexString: "#0ad560")
+            instanceColor = UIColor(hexString: "#BDBDBD")
         case .secondary:
             instanceColor = UIColor(hexString: "#333333")
         }

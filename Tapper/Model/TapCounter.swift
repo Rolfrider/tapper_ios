@@ -22,7 +22,7 @@ class TapCounter {
     var taps: Int = 0 {
         didSet{
             NotificationCenter.default.post(
-                Notification(name: Notification.Name(rawValue: self.TAP_COUNT), object: nil))
+                Notification(name: Notification.Name(rawValue: self.TAP_COUNT), object: self))
         }
     }
     
@@ -42,7 +42,7 @@ class TapCounter {
         let score = Score(taps: self.taps, time: self.gameDate)
         newRecord = userDefsAdapter.saveScore(score: score)
         NotificationCenter.default.post(
-            Notification(name: Notification.Name(rawValue: self.TAP_RECORD), object: nil))
+            Notification(name: Notification.Name(rawValue: self.TAP_RECORD), object: self))
         
     }
 }

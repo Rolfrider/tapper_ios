@@ -10,10 +10,12 @@ import UIKit
 class ScoreViewController: UICollectionViewController {
     
     private let reuseIdentifier = "Score"
-    private let sectionInsets = UIEdgeInsets(top: 20,
-                                             left: 20,
-                                             bottom: 20,
-                                             right: 20)
+    private let sectionInsets = UIEdgeInsets(top: 16,
+                                             left: 24,
+                                             bottom: 16,
+                                             right: 24)
+    
+    let places = [1, 2, 3, 4, 5]
     
     private var scores: [Score] = []
     private let userDefsAdapter: UserDefsAdapting
@@ -30,6 +32,7 @@ class ScoreViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        collectionView.showsVerticalScrollIndicator = false
         collectionView.backgroundColor = Color.secondary.value
     }
     
@@ -62,11 +65,29 @@ extension ScoreViewController{
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ScoreCell
         
-        cell.backgroundColor = Color.accent.value
+        cell.setUp()
         cell.tapsLbl.text = "\(scores[indexPath.section].taps)"
         cell.timeLbl.text = scores[indexPath.section].time
         
         return cell
+    }
+    
+    
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        switch kind {
+        case UICollectionView.elementKindSectionHeader:
+            guard let headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "Place", for: indexPath) as? ScoreHeaderView
+                else {
+                    fatalError("Invalid view type")
+            }
+            let place = places[indexPath.section]
+            headerView.label.text = "\(place)"
+            headerView.setUp()
+            return headerView
+        default:
+            assert(false, "Invalid element type")
+        }
     }
 }
 // MARK: UICollectionViewDelegateFlowLayout
@@ -79,7 +100,7 @@ extension ScoreViewController: UICollectionViewDelegateFlowLayout{
         let availableWidth = view.frame.width
         
         
-        return CGSize(width: availableWidth - sectionInsets.left*2, height: 98)
+        return CGSize(width: availableWidth - sectionInsets.left*2, height: 80)
     }
     
     func collectionView(_ collectionView: UICollectionView,

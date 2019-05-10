@@ -18,7 +18,6 @@ class UserDefsAdapter: UserDefsAdapting {
     let SCORES_KEY = "SCORES"
 
     func getScore() -> [Score] {
-        
         guard let data = UserDefaults.standard.data(forKey: SCORES_KEY) else {
             return []
         }
