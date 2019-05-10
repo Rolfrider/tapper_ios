@@ -11,7 +11,6 @@
 		8E9D45BF2280AC41001162CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D45BE2280AC41001162CC /* ViewController.swift */; };
 		8E9D45C22280AC41001162CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9D45C02280AC41001162CC /* Main.storyboard */; };
 		8E9D45C42280AC43001162CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E9D45C32280AC43001162CC /* Assets.xcassets */; };
-		8E9D45C72280AC43001162CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E9D45C52280AC43001162CC /* LaunchScreen.storyboard */; };
 		8E9D45D22280AC43001162CC /* TapperTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D45D12280AC43001162CC /* TapperTests.swift */; };
 		8E9D45F42281E941001162CC /* ScoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D45F32281E941001162CC /* ScoreViewController.swift */; };
 		8E9D45F62281E9B8001162CC /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D45F52281E9B8001162CC /* Score.swift */; };
@@ -22,6 +21,7 @@
 		8E9D46032283108A001162CC /* TimeCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D46022283108A001162CC /* TimeCounter.swift */; };
 		8E9D4605228319FE001162CC /* TapCounter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D4604228319FE001162CC /* TapCounter.swift */; };
 		8E9D460922831C94001162CC /* UserDefAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D460822831C94001162CC /* UserDefAdapter.swift */; };
+		8E9D460F22849BB6001162CC /* ScoreHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E9D460E22849BB6001162CC /* ScoreHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +40,6 @@
 		8E9D45BE2280AC41001162CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8E9D45C12280AC41001162CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8E9D45C32280AC43001162CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		8E9D45C62280AC43001162CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E9D45C82280AC43001162CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E9D45CD2280AC43001162CC /* TapperTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TapperTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E9D45D12280AC43001162CC /* TapperTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapperTests.swift; sourceTree = "<group>"; };
@@ -54,6 +53,7 @@
 		8E9D46022283108A001162CC /* TimeCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCounter.swift; sourceTree = "<group>"; };
 		8E9D4604228319FE001162CC /* TapCounter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TapCounter.swift; sourceTree = "<group>"; };
 		8E9D460822831C94001162CC /* UserDefAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefAdapter.swift; sourceTree = "<group>"; };
+		8E9D460E22849BB6001162CC /* ScoreHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +101,6 @@
 				8E9D45BC2280AC41001162CC /* AppDelegate.swift */,
 				8E9D45C02280AC41001162CC /* Main.storyboard */,
 				8E9D45C32280AC43001162CC /* Assets.xcassets */,
-				8E9D45C52280AC43001162CC /* LaunchScreen.storyboard */,
 				8E9D45C82280AC43001162CC /* Info.plist */,
 			);
 			path = Tapper;
@@ -132,6 +131,7 @@
 			children = (
 				8E9D45FE2281F63B001162CC /* Color.swift */,
 				8E9D45F72281E9CE001162CC /* ScoreCell.swift */,
+				8E9D460E22849BB6001162CC /* ScoreHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -236,7 +236,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8E9D45C72280AC43001162CC /* LaunchScreen.storyboard in Resources */,
 				8E9D45C42280AC43001162CC /* Assets.xcassets in Resources */,
 				8E9D45C22280AC41001162CC /* Main.storyboard in Resources */,
 			);
@@ -266,6 +265,7 @@
 				8E9D45F82281E9CE001162CC /* ScoreCell.swift in Sources */,
 				8E9D4605228319FE001162CC /* TapCounter.swift in Sources */,
 				8E9D45F62281E9B8001162CC /* Score.swift in Sources */,
+				8E9D460F22849BB6001162CC /* ScoreHeaderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,14 +295,6 @@
 				8E9D45C12280AC41001162CC /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		8E9D45C52280AC43001162CC /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8E9D45C62280AC43001162CC /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

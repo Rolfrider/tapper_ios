@@ -12,4 +12,9 @@ class ScoreCell: UICollectionViewCell {
     
     @IBOutlet weak var timeLbl: UILabel!
     @IBOutlet weak var tapsLbl: UILabel!
+    
+    func setUp(){
+        self.layer.cornerRadius = self.frame.height*0.5
+        self.backgroundColor = Color.primary.value
+    }
 }
