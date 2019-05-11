@@ -28,28 +28,39 @@
                                 </connections>
                             </button>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZJz-3S-QvA">
-                                <rect key="frame" x="32" y="185" width="350" height="566"/>
+                                <rect key="frame" x="32" y="230" width="350" height="521"/>
                                 <connections>
                                     <segue destination="TZQ-Xh-GzK" kind="embed" id="98y-Et-rRT"/>
                                 </connections>
                             </containerView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DaftTapper" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnW-lR-6d0">
-                                <rect key="frame" x="86.5" y="76" width="241" height="61"/>
-                                <fontDescription key="fontDescription" name="GillSans-SemiBoldItalic" family="Gill Sans" pointSize="51"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="afV-lA-gbx">
+                                <rect key="frame" x="105" y="76" width="204.5" height="130"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DaftTap" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hnW-lR-6d0">
+                                        <rect key="frame" x="16.5" y="0.0" width="171.5" height="61"/>
+                                        <fontDescription key="fontDescription" name="GillSans-SemiBoldItalic" family="Gill Sans" pointSize="51"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Challenge" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgN-aB-eHa">
+                                        <rect key="frame" x="0.0" y="69" width="204.5" height="61"/>
+                                        <fontDescription key="fontDescription" name="GillSans-SemiBoldItalic" family="Gill Sans" pointSize="51"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="ZJz-3S-QvA" firstAttribute="top" secondItem="hnW-lR-6d0" secondAttribute="bottom" constant="48" id="74I-Y4-VCT"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZJz-3S-QvA" secondAttribute="trailing" constant="32" id="7EZ-Bn-Rgv"/>
+                            <constraint firstItem="afV-lA-gbx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="83R-vb-KyU"/>
                             <constraint firstItem="7m9-oL-6Ep" firstAttribute="top" secondItem="ZJz-3S-QvA" secondAttribute="bottom" id="XfS-MD-ss4"/>
+                            <constraint firstItem="ZJz-3S-QvA" firstAttribute="top" secondItem="afV-lA-gbx" secondAttribute="bottom" constant="24" id="Z79-pI-Cnq"/>
                             <constraint firstItem="7m9-oL-6Ep" firstAttribute="leading" secondItem="ZJz-3S-QvA" secondAttribute="leading" id="aOo-cg-xer"/>
+                            <constraint firstItem="afV-lA-gbx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dHa-0n-yHB"/>
                             <constraint firstItem="7m9-oL-6Ep" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="evx-n0-AvW"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="7m9-oL-6Ep" secondAttribute="bottom" constant="32" id="iST-ER-tkb"/>
-                            <constraint firstItem="hnW-lR-6d0" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="32" id="jlL-Rm-m91"/>
-                            <constraint firstItem="hnW-lR-6d0" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="nH1-Ac-6UB"/>
                             <constraint firstItem="ZJz-3S-QvA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="32" id="nt9-u9-mrz"/>
                             <constraint firstItem="7m9-oL-6Ep" firstAttribute="trailing" secondItem="ZJz-3S-QvA" secondAttribute="trailing" id="t9X-KF-c1d"/>
                             <constraint firstItem="ZJz-3S-QvA" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="yCr-sD-bH0"/>
@@ -58,7 +69,8 @@
                     </view>
                     <connections>
                         <outlet property="playButton" destination="7m9-oL-6Ep" id="QER-S7-rH3"/>
-                        <outlet property="titleLbl" destination="hnW-lR-6d0" id="M1r-uB-Yov"/>
+                        <outlet property="titleDownLbl" destination="RgN-aB-eHa" id="jsF-r0-tKL"/>
+                        <outlet property="titleUpLbl" destination="hnW-lR-6d0" id="M1r-uB-Yov"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -70,7 +82,7 @@
             <objects>
                 <collectionViewController id="TZQ-Xh-GzK" customClass="ScoreViewController" customModule="Tapper" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="HW6-lt-g4z">
-                        <rect key="frame" x="0.0" y="0.0" width="350" height="566"/>
+                        <rect key="frame" x="0.0" y="0.0" width="350" height="521"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="kKz-bj-DEf">

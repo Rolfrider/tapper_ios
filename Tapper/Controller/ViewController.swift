@@ -14,7 +14,8 @@ class ViewController: UIViewController {
         
 
     @IBOutlet weak var playButton: UIButton!
-    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var titleUpLbl: UILabel!
+    @IBOutlet weak var titleDownLbl: UILabel!
     
     
     override func viewDidLoad() {
@@ -40,7 +41,9 @@ extension ViewController {
     }
     
     private func setUpTitleLbl(){
-        titleLbl.textColor = Color.primary.value
+        titleUpLbl.textColor = Color.primary.value
+        
+        titleDownLbl.textColor = Color.primary.value
     }
 }
 
