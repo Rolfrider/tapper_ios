@@ -174,26 +174,26 @@ extension TappingViewController{
     private func registerObservers(){
         NotificationCenter.default.addObserver(
         forName: NSNotification.Name(timeCounter.TIMER_TICK), object: timeCounter, queue: OperationQueue.main){
-            _ in
-            self.displayTime()
+            [weak self] _ in
+            self?.displayTime()
         }
         
         NotificationCenter.default.addObserver(
         forName: NSNotification.Name(timeCounter.TIMER_END), object: timeCounter, queue: nil){
-            _ in
-            self.endGame()
+            [weak self] _ in
+            self?.endGame()
         }
         
         NotificationCenter.default.addObserver(
         forName: NSNotification.Name(tapCounter.TAP_COUNT), object: tapCounter, queue: OperationQueue.main){
-            _ in
-            self.displayTaps()
+            [weak self] _ in
+            self?.displayTaps()
         }
         
         NotificationCenter.default.addObserver(
         forName: NSNotification.Name(tapCounter.TAP_RECORD), object: tapCounter, queue: OperationQueue.main){
-            _ in
-            self.displayNotification()
+            [weak self] _ in
+            self?.displayNotification()
         }
     }
 }
